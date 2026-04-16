@@ -1,0 +1,15 @@
+*** WORKING WITH TEXT ***
+
+- Paragraphs
+    - Each paragraph needs to be seperated with the <p> tag.
+
+- Headings
+    - Headings are displayed larger and bolder than other text to signify they are headings.
+    - There are 6 different types from <h1> to <h6>.
+
+- Bold(strong) Element
+    - The <strong> makes the text bold.
+    - You can use <strong> on its own but will probably use it in combo with other elements.
+
+- Italic(em) Element
+    - The <em> element makes text italic.

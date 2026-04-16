@@ -1,0 +1,24 @@
+*** HTML ELEMENTS AND TAGS ***
+
+- Elements are used to create all of the paragraphs, headings, lists, images, and links that make up a webpage.
+- Elements are just pieces of content that are wrapped in opening and closing tags.
+    - Example of paragraph
+        - <p>Hello, world!</p>
+    - List of HTML elements: 
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements
+
+2 reasons for using the correct element tag:
+    1. It has a big impact on how they are ranked in search engines.
+    2. Impact on accessible they are to users who rely on assistive tech, like screen readers.
+
+Void Elements
+    - Some HTML elements do not have a closing tag.
+    - They do not wrap content like other tags do.
+        - <br> or <img>
+
+- The three parts of an elements tag is opening are the opening tab, the closing tab, and the content wrapped in these tags.
+
+- The <head> element is where we put meta info about our website.
+    - No elements inside the <head> should show on the webpage.
+
+- The <body> element is where the content of the page that is displayed will go.

@@ -1,0 +1,11 @@
+*** LISTS ***
+
+- Unordered lists (<ul>)
+    - List of items where the order doesn't matter. (Shopping list)
+    - The <ul> tag creates unordered lists.
+    - Each list item is created with the <li> tag.
+
+- Ordered Lists (<ol>)
+    - Ordered lists will appear on the webpage numbered.
+    - Created using the <ol> tag.
+    - Each individual list item is still created using the <li> tag.

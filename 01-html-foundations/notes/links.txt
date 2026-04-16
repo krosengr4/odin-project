@@ -1,0 +1,29 @@
+*** LINKS ***
+
+- Anchor Elements (<a>)
+    - To create a link in HTML we use the anchor element.
+    - We use the <a> tag to wrap the text or another HTML element that we want to link.
+    - The <a> tag on its own will hyperlink the text, but clicking it won't do anything.
+    
+- HTML Attribute
+    - An HTML attribute gives additional info to an HTML element and goes in the element's opening tag.
+    - An href (hypertext reference) attribute will be used to give the value of the destination where the link will go.
+    - Opening Links in New Tabs
+        - The target attribute specifies where the link will open.
+        - While the href specifies the destination, the target attribute specifies where the link will open. 
+        - The default is target="_self", but to open in a new tab we need target="_blank".
+
+    - The rel attribute
+        - Describes the relation between the current page and the linked document.
+        - Values for the rel attr:
+            - noopener: Prevents the new tab from accessing the original page. This eliminates the possibility of a phishing attack like tabnabbing.
+            - noreferrer: Same as noopener but prevents certain details about the original page from being passed to the new page.
+
+- Absolute vs Relative Links
+    - Absolute Links:
+        - Links to pages on other websites on the internet.
+        - This will typically be made up of: scheme://domain/path
+    - Relative Links:
+        - Links to other pages within or own website.
+        - Assumes the domain name is the same as the page we created the link on.
+

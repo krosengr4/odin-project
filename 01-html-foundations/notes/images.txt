@@ -1,0 +1,18 @@
+*** IMAGES ***
+
+- HTML provides a wide variety of elements for displaying all sorts of media.
+
+- The Image Element (<img>)
+    - The <img> tag is used to display an image.
+    - The <img> tag is a void element, not needing a closing tag.
+    - The tag embeds an image into the page using the src attribute.
+    - Like the href attribute, src can use both absolute and relative paths.
+    
+- The alt Attribute
+    - Every image tag should also have an alt attribute.
+    - The alt attribute is used to describe an image. This is used in place of the image if it cant be loaded.
+
+- Image Size Attributes
+    - Specifying height and width attributes in the HTML helps the browser layout the page without causing the page to jump and flash.
+    - It is a good habit to specify this on every image to prevent content jumping as the image loads.
+
