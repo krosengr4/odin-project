@@ -1,0 +1,14 @@
+***** CSS CASCADE SPECIFICITY *****
+
+- A CSS declaration that is more specific will take precedence over less specific ones.
+    - Inline styles have the highest specificity.
+
+- Speceficity is only taken into account when an element has multiple, conflicting declarations targeting it.
+    - ID selector > any # of class selectors
+    - Class selector > any # of type selectors
+    - Type selector > any # of less specific selectors
+    - When there is no declaration of higher specificity, a rule with a greater # of selectors will win over a rule with fewer selectors.
+
+- Not Everything Adds to Specificity
+    - Sometimes you will see a rule use the universal selector(*) as well as combinators. However, these symbols do not inherently convey any additional specificity.
+    - The core concept of specificity is what is being selected (class, ID, etc.) and how many selectors are being used.
