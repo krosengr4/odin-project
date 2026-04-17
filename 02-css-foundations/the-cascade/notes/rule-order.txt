@@ -1,0 +1,19 @@
+***** RULE ORDER *****
+
+- Rule Order states that when multiple conflicting rules are targeting an element, and every factor has been taken into account,
+  *whichever rule was last defined is the winner.*
+
+- Last defined means whichever rule is defined closest to the bottom of the file.
+
+- Example(CSS):
+    - .alert {
+        color: red;
+    }
+
+       .warning {
+           color: yellow;
+       }
+
+    - Let's assume that every factor pertaining to the cascade has been ran through.
+    - Since the .warning rule was the one last defined, the .warning rule would get applied to the element.
+
