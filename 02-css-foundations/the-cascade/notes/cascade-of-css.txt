@@ -1,0 +1,14 @@
+***** THE CASCADE OF CSS *****
+
+- Sometimes we have CSS rules that conflict with one another and we end up with unexpected results.
+- This can be frustrating, but remember CSS does what * we tell it to do *.
+    - One exception to this is the default styles provided by browsers.
+- When unexpected results happen, it is either weird browser default styles, or because we don't understand * CASCADE *
+
+- Cascade
+    - The cascade is what determines what rules get applied in our HTML.
+    - There are different factors that the cascade uses to determine this.
+    - Some Factors:
+        - Specificity: The algorithm used by browsers to determine which style declaration takes precedence when multiple rules target the same element.
+        - Inheritance: Certain property values are passed down from a parent element to its child elements.
+        - Rule Order: determines which styles are applied when multiple rules conflict.
