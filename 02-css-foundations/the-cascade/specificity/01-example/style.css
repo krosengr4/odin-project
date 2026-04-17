@@ -1,0 +1,15 @@
+/* rule 1 */
+.subsection {
+    color: blue;
+}
+
+/* rule 2 */
+.main .list {
+    color: red;
+}
+
+/*
+ * Rule 2 takes precedents because it is more specific
+ * Both rules are using class selectors, but rule 2 is using more, so the "color: red;" declaration wins.
+ */
+

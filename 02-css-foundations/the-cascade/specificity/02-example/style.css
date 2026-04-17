@@ -1,0 +1,16 @@
+/* rule 1 */
+#subsection {
+  color: blue;
+}
+
+/* rule 2 */
+.main .list {
+  color: red;
+}
+
+/*
+ * Rule 1 would take precedence and make the text blue.
+ * Despite rule 2 having more selectors, they are class selectors where rule 1 uses a ID selector.
+ * Rule 1 is more specific because an ID selector beats any # of class selectors.
+*/
+

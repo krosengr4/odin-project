@@ -1,0 +1,15 @@
+/* rule 1 */
+#subsection {
+  background-color: yellow;
+  color: blue;
+}
+
+/* rule 2 */
+.main #subsection {
+ color: red;
+}
+
+/*
+ * Rule 2 would take precedence on the text color here.
+ * Both rules have an ID selector, but rule 2 has a class selector in addition, so it has higher specificity.
+*/
