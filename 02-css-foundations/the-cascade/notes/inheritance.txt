@@ -1,0 +1,12 @@
+***** INHERITANCE WITH CSS CASCADE *****
+
+- Inheritance refers to CSS properties that are inherited by an element's descendants when the properties are applied to that element.
+
+- Typography-based and color properties are inherited properties.
+- The display property is not inherited.
+
+- Selecting the child element would take precedence when two CSS properties are competing.
+- The parent could have higher specificity, but the child would still take precedence.
+
+- Child > Parent
+- Inheritance > Specificity
