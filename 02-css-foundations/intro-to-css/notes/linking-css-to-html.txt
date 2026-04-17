@@ -1,0 +1,42 @@
+*** HOW TO LINK HTML AND CSS ***
+
+- External CSS
+    - This method involves creating a seperate file for the CSS.
+    - The seperate file is linked inside of the HTML's opening and closing <head> tags.
+    - This is the most common method.
+    - Pro's:
+    - Keeps HTML and CSS seperated, which makes things look cleaner.
+    - We only need to edit the CSS in one place.
+
+    - Ex(html):
+        <head>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+
+- Internal CSS
+    - Involves adding the CSS within the HTML file, instead of creating a new file.
+    - All CSS rules are placed within opening and closing <style> tags, which are within the <head>.
+
+    -Ex:
+        <head>
+            <style>
+                div {
+                    color: white;
+                    background-color: black;
+                }
+
+                p {
+                    color: red;
+                }
+            </style
+        </head>
+
+
+- Inline CSS
+    - The styles are directly added to the opening <div> tag.
+    - Within the <div> tag we use a style attribute.
+
+    - Ex:
+        <body>
+            <div style="color: white; background-color: black;">...</div>
+        </body>

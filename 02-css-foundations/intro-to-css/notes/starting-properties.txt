@@ -1,0 +1,25 @@
+*** PROPERTIES TO GET STARTED WITH ***
+
+- Color and Background Color
+    - The color property sets the elements text color.
+    - Background color sets the background color of an element.
+    - Values can be keyword(red), HEX, RBG, and HSL
+    - https://www.w3schools.com/cssref/css_colors_legal.php
+
+- Typography basics and text-align
+    - font-family can determine what font an element uses.
+        - This can be a single value or a comma-seperated list of values
+    - font-size will set the size of the font
+    - font-weight will affect the boldness of the text
+        - this value can be a keyword(bold) or a number between 1 and 1000
+    - text-align will align text horizontally within an element
+        - Ex: text-align: center;
+
+- Image Height and Width
+    - You would use px as the value to adjust height and width.
+    - If you want to adjust an images height or width without causing it to lose it's proportions, you would set either height or width to auto.
+    - Ex:
+        - .img {
+            height: 500px;
+            width: auto;
+        }
