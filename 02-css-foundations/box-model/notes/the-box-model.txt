@@ -1,0 +1,17 @@
+***** THE BOX MODEL *****
+
+- The most important skills to know when it comes to HTML and CSS:
+    1. Positioning
+    2. Layout
+
+- The Box Model
+    - Every single thing on a webpage is a rectangular box.
+
+- Manipulating Size
+    - Padding:
+        - Increases the space beween the border of a box and the content of the box.
+    - Border:
+        - Adds space between the margin and the padding.
+    - Margin:
+        - Increases the space between the borders of a box and the borders of adjacent boxes.
+
