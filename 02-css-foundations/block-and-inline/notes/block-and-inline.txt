@@ -1,0 +1,19 @@
+***** BLOCK AND INLINE *****
+
+- CSS has two box types:
+    1. Block
+    2. Inline
+
+- Block vs Inline
+    - Most of the elements learned about so far are block elements.
+
+- Block Elements:
+    - Will appear on the page stacked atop each other, each new element starting on a new line.
+- Inline Elements:
+    - Will appear inline with whatever elements they are placed beside.
+    - Example is the <a> tag. 
+
+- The Middle Ground: inline-block
+    - inline-block elements behave like inline elements, but with block style padding and margin.
+    - display: inline-block;
+

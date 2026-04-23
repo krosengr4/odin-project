@@ -1,0 +1,18 @@
+***** DIVS AND SPANS *****
+
+
+- Divs and spans are just generic boxes that can contain other elements.
+- Often times, these elements are used to be "hook" elements.
+- We can give an id or class to target them for styling with CSS.
+
+- Another use case regularly faced is grouping related elements under one parent element to correctly position them on the page.
+
+- Div
+    - Used as a container element to group other elements.
+    - <div> is a block-level element by default.
+    - Allow us to divide the page into different blocks and apply styling to these blocks.
+
+- Span
+    - Can be used to group text content and inline HTML elements for styling.
+    - <span> is an inline-level element by default
+    - Should be used when no other semantic HTML element is appropriate.
