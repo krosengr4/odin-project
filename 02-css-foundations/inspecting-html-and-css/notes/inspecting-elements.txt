@@ -1,0 +1,11 @@
+***** INSPECTING ELEMENTS *****
+
+- In the elemenets panel, you can see the entire HTML structure of your page.
+- When an element is selected, the Styles tab will show all the currently applied styles.
+    - This will also show the styles that are being overwritten.
+
+- Testing Styles in the Inspector
+    - The Styles panel will also allow you to edit styles directly in the browser.
+    - The webpage will response in real-time.
+    - This won't affect the source code, but is useful for testing out various attributes and values without needing to reload the page.
+    
