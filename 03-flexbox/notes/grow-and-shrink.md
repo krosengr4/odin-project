@@ -24,3 +24,7 @@
 ## Overall
 - In practice you will not likely be using complex values for flex-grow, flex-shrink, or flex-basis.
 - Generally you will use flex: 1; to make div's grow evenly, and then flex-shrink: 0; to keep certain div's from shrinking.
+
+#### Useful Links
+- Basic Values of flex: https://www.w3.org/TR/css-flexbox-1/#flex-common
+- MDN's flex documentation: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex
