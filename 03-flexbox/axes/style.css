@@ -1,0 +1,13 @@
+.flex-container {
+    display: flex;
+    /* this will determine the direction that items in the flex-container are displayed (column or row) */
+    flex-direction: column;
+}
+
+.flex-container div {
+    text-align: center;
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 100px;
+    flex: auto;
+}
