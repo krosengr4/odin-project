@@ -9,7 +9,7 @@
     height: 100px;
     width: 250px;
     /* notice the 3 properties (grow, shrink and basis) */
-    flex: 1 1 50%;
+    flex: 1 1 auto;
 }
 
 /* only selects the div class .two */
