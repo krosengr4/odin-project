@@ -1,3 +1,4 @@
+/* Note: "display: flex;" goes in the parent container */
 .flex-container {
     display: flex;
 }
@@ -7,6 +8,5 @@
     background: peachpuff;
     border: 18px solid brown;
     height: 200px;
-    flex: 1; 
+    flex: 1;
 }
-
