@@ -4,17 +4,21 @@
  * Then it will sum and return all those even numbers
  */
 
-function sumOfTripledEvens(array) {
-    let sum = 0;
-    for (let i = 0; i < array.length; i++) {
-        if (array[i] % 2 === 0) {
-            const numTripled = 3 * array[i];
-            sum += numTripled;
-        }
-    }
-    return sum;
+function isEven(num) {
+    return num % 2 === 0;
 }
 
-let arr = [1, 2, 3, 2];
+function times3(num) {
+    return num * 3;
+}
+
+function sumOfTripledEvens(arr) {
+    return arr
+        .filter(isEven)
+        .map(times3)
+        .reduce((acc, curr) => acc + curr);
+}
+
+let arr = [1, 2, 3, 4];
 const result = sumOfTripledEvens(arr);
 console.log(result);
