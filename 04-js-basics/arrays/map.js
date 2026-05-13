@@ -1,4 +1,5 @@
-// The .map() method lets you transform every element in an array and produce a new array
+// The .map() method lets you transform every element in an array and produce a
+// new array
 function toUpper(str) {
     return str.toUpperCase();
 }

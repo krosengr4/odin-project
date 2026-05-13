@@ -34,7 +34,7 @@ console.log(animals); // Bear
 // Now let's use splice() to replace
 let arr = ["I", "Study", "JavaScript"];
 console.log(arr);
-arr.splice(0, 3, "Let's", "Dance"); // Remove elements 0 - 3 and replace with "Let's" "Dance"
+arr.splice(0, 3, "Let's", "Dance"); // Remove elements 0 - 3 and replace with"Let's" "Dance"
 console.log(arr);
 
 // Now to use splice() to insert elements

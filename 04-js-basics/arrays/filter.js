@@ -1,4 +1,5 @@
-// The .filter() method is used to create a new array containing only elements from an existing array that meet a specific condition
+// The .filter() method is used to create a new array containing only elements
+// from an existing array that meet a specific condition
 
 const animals = ["lion", "tiger", "bear", "lemur"];
 console.log(animals);
