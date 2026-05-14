@@ -17,6 +17,33 @@ for (const cat of cats) {
     console.log(cat);
 }
 
+// This can also be done with .forEach()
+let nums = [1, 2, 3];
+nums.forEach((num) => {
+    console.log(num);
+});
+
+// You can exit loops with the "break" keyword
+nums = [1, 2, 3, 4, 5];
+for (const num of nums) {
+    console.log(num);
+    if (num === 3) {
+        console.log("BREAK!");
+        break;
+    }
+}
+
+// You can also skip the iteration with the "continue" keyword
+let names = ["Bob", "Earl", "Dave"];
+for (const name of names) {
+    if (name === "Earl") {
+        console.log("SKIP");
+        continue;
+    }
+
+    console.log(name);
+}
+
 function toUpper(string) {
     return string.toUpperCase();
 }
