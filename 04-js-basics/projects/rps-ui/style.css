@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.choice {
+    display: none;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-again {
+    display: block;
+    margin: 0 auto;
+}
