@@ -21,6 +21,70 @@ body {
     box-sizing: border-box;
 }
 
+#color-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 48px;
+}
+
+.color-btn {
+    border: 3px solid #ccc;
+    background-color: black;
+    height: 48px;
+    width: 72px;
+}
+
+#blue {
+    color: blue;
+}
+
+#blue:hover {
+    color: white;
+    background-color: blue;
+    cursor: crosshair;
+}
+
+#red {
+    color: red;
+}
+
+#red:hover {
+    color: white;
+    background-color: red;
+    cursor: crosshair;
+}
+
+#yellow {
+    color: yellow;
+}
+
+#yellow:hover {
+    color: white;
+    background-color: #929000;
+    cursor: crosshair;
+}
+
+#green {
+    color: green;
+}
+
+#green:hover {
+    color: white;
+    background-color: green;
+    cursor: crosshair;
+}
+
+#erase {
+    color: white;
+}
+
+#erase:hover {
+    color: black;
+    background-color: white;
+    cursor: crosshair;
+}
+
 #button {
     display: flex;
     /* align-items: center; */
@@ -28,8 +92,9 @@ body {
 }
 
 #reset {
-    background-color: white;
-    color: blue;
+    background-color: black;
+    color: white;
+    border: 3px solid #ccc;
     height: 48px;
     width: 72px;
     display: flex;
@@ -38,6 +103,7 @@ body {
 }
 
 #reset:hover {
-    background-color: blue;
-    color: white;
+    background-color: white;
+    color: black;
+    cursor: pointer;
 }

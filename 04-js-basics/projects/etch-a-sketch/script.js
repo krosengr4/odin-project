@@ -1,5 +1,32 @@
 const container = document.querySelector("#container");
 const resetBtn = document.querySelector("#reset");
+const blueBtn = document.querySelector("#blue");
+const redBtn = document.querySelector("#red");
+const yellowBtn = document.querySelector("#yellow");
+const greenBtn = document.querySelector("#green");
+const eraseBtn = document.querySelector("#erase");
+
+var color = "black";
+
+blueBtn.addEventListener("click", () => {
+    color = "blue";
+});
+
+redBtn.addEventListener("click", () => {
+    color = "red";
+});
+
+yellowBtn.addEventListener("click", () => {
+    color = "yellow";
+});
+
+greenBtn.addEventListener("click", () => {
+    color = "green";
+});
+
+eraseBtn.addEventListener("click", () => {
+    color = "black";
+});
 
 function createGrid(size) {
     const squareSize = 960 / size;
@@ -20,7 +47,7 @@ function createGrid(size) {
 
 function onHover(event) {
     square = event.target;
-    square.style.backgroundColor = "blue";
+    square.style.backgroundColor = `${color}`;
 }
 
 function promptGridSize() {
