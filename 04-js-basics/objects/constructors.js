@@ -3,13 +3,14 @@ function createPerson(name, age) {
     obj.name = name;
     obj.age = age;
     obj.introduce = () => {
-        console.log(
-            `Hello! I am ${person.name} and I am ${person.age} years old!`,
-        );
+        console.log(`Hello! I am ${name} and I am ${age} years old!`);
     };
 
     return obj;
 }
 
-let person = createPerson("Bob", 58);
-person.introduce();
+let bob = createPerson("Bob", 58);
+bob.introduce();
+
+let sarah = createPerson("Sarah", 12);
+sarah.introduce();
