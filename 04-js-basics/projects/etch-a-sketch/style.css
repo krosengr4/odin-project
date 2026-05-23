@@ -1,0 +1,43 @@
+* {
+    background-color: #000000;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+}
+
+#container {
+    width: 960px;
+    height: 960px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-square {
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#button {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+#reset {
+    background-color: white;
+    color: blue;
+    height: 48px;
+    width: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset:hover {
+    background-color: blue;
+    color: white;
+}
