@@ -1,0 +1,24 @@
+body {
+    text-align: center;
+}
+
+.one {
+    background: green;
+}
+
+.two {
+    background: content-box radial-gradient(crimson, skyblue);
+}
+
+.three {
+    background: center no-repeat url(./images/Cameron-Hughes.png);
+}
+
+.four {
+    background: left 5% / 15% 60% repeat-x url(./images/Cameron-Hughes.png);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
