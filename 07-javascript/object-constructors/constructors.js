@@ -7,10 +7,15 @@ function Person(name, age) {
     this.age = age;
 
     this.introduce = function () {
-        console.log(`My name is ${this.name} and I am ${this.age} years old.`);
+        return `My name is ${this.name} and I am ${this.age} years old.`;
     };
 }
 
 // Use "new" keyword to make new instance of object
 const person = new Person("Kevin", 527);
-person.introduce();
+let personInfo = person.introduce();
+console.log(personInfo);
+
+const person2 = new Person("Ralph", 67);
+personInfo = person2.introduce();
+console.log(personInfo);
