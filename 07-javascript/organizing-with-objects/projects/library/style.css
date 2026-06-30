@@ -1,5 +1,23 @@
 .header {
+    font-size: 32px;
     display: flex;
     justify-content: center;
     text-decoration: underline;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+.add {
+    font-size: 24px;
+    width: 300px;
+    height: 100px;
+    background-color: teal;
+}
+
+.add:hover {
+    background-color: cornsilk;
+    cursor: pointer;
 }
