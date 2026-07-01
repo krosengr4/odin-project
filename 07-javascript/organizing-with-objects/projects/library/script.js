@@ -1,3 +1,11 @@
+const addBookModal = document.getElementById("my-dialog");
+const sumbitBtn = document.getElementById("submit-btn");
+const bookTitleEl = document.getElementById("book-title");
+const bookAuthorEl = document.getElementById("book-author");
+const pageCountEl = document.getElementById("page-count");
+
+sumbitBtn.addEventListener("click", addBookToLibrary);
+
 const myLibrary = [];
 
 function Book(title, author, pages) {
@@ -11,18 +19,46 @@ function Book(title, author, pages) {
     };
 }
 
-function addBookToLibrary(title, author, pages) {
-    let newBook = new Book(title, author, pages);
-    myLibrary.push(newBook);
+function addBookToLibrary() {
+    const titleVal = bookTitleEl.value;
+    if (titleVal === "") {
+        alert("Book Title must be filled out!");
+        return;
+    }
+
+    const authorVal = bookAuthorEl.value;
+    if (authorVal === "") {
+        alert("Book Author must be filled out!");
+        return;
+    }
+
+    const pagesVal = pageCountEl.value;
+    const pagesNum = Number(pagesVal);
+    if (!Number.isInteger(pagesNum) || pagesVal === "") {
+        alert("Page Count must be filled out with a number!");
+        return;
+    }
+
+    let book = new Book(titleVal, authorVal, pagesVal);
+    const bookValues = book.info();
+    console.log(bookValues);
+
+    myLibrary.push(book);
+    closeDialog();
 }
 
-function displayLibrary(arr) {
+function closeDialog() {
+    bookTitleEl.value = "";
+    bookAuthorEl.value = "";
+    pageCountEl.value = "";
+    addBookModal.close();
+}
+
+function displayLibrary() {
     for (const book of myLibrary) {
         const bookInfo = book.info();
         console.log(bookInfo);
     }
 }
-
-addBookToLibrary("test", "Mister Test", 123);
 
 displayLibrary(myLibrary);
