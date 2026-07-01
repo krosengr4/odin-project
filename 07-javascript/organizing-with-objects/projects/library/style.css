@@ -15,11 +15,14 @@
     width: 200px;
     height: 75px;
     background-color: teal;
+    border: 4px solid tan;
 }
 
 .add:hover {
+    color: teal;
     background-color: cornsilk;
     cursor: pointer;
+    border-color: teal;
 }
 
 .books {
@@ -39,6 +42,19 @@
     align-items: center;
     padding-left: 24px;
     padding-right: 24px;
+}
+
+.delete {
+    background-color: red;
+    border: 3px solid black;
+    margin-bottom: 8px;
+}
+
+.delete:hover {
+    cursor: pointer;
+    color: red;
+    background-color: black;
+    border-color: red;
 }
 
 .card-title {
