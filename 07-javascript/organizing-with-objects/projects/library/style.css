@@ -11,13 +11,17 @@
 }
 
 .add {
-    font-size: 24px;
-    width: 300px;
-    height: 100px;
+    font-size: 18px;
+    width: 200px;
+    height: 75px;
     background-color: teal;
 }
 
 .add:hover {
     background-color: cornsilk;
     cursor: pointer;
+}
+
+p {
+    font-size: 18px;
 }

@@ -12,10 +12,26 @@
             <p class="SubTitle"></p>
         </div>
         <div class="btn">
-            <button class="add">Add A Book!</button>
+            <button class="add" command="show-modal" commandfor="my-dialog">
+                Add A Book!
+            </button>
         </div>
-        <div class="books">
-            <h3>Books Available</h3>
-        </div>
+        <dialog id="my-dialog">
+            <form class="form">
+                <h3 class="modal-title">Book Information</h3>
+                <label for="bookTitle">Book Title:</label><br />
+                <input type="text" id="book-title" name="bookTitle" /><br />
+                <label for="bookAuthor">Book Author:</label><br />
+                <input type="text" id="book-author" name="bookAuthor" /><br />
+                <label for="pageCount">Page Count:</label><br />
+                <input type="text" id="page-count" name="pageCount" /> <br />
+            </form>
+            <br />
+            <div class="modal-btns">
+                <input id="submit-btn" type="submit" value="Submit" />
+                <button commandfor="my-dialog" command="close">Cancel</button>
+            </div>
+        </dialog>
+        <div class="books"></div>
     </body>
 </html>
