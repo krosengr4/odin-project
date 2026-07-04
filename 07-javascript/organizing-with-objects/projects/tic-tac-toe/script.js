@@ -118,4 +118,24 @@ function GameController(playerOneName = "player1", playerTwoName = "player2") {
     return { playRound, getActivePlayer };
 }
 
+/*
+ * ScreenController.
+ * Since the players will be interacting with the DOM, we create DOM references.
+ * Create DOM references to game board and player turn display
+ * updateScreen()
+ * Create and render buttons for each space on the board.
+ *
+ * clickHandlerBoard(); will:
+ * Verify a valid cell has been clicked
+ * Will get column and row data-attribute clicked and pass it to playRound() method
+ * Run updateScreen() to refresh the DOM
+ *
+ * updateScreen() will:
+ * Clear DOM of current board display
+ * Get most up to date board from game controller
+ * Get the active player from game controller
+ * Render players turn in html
+ * Render each grid space on the DOM
+ */
+
 const game = GameController();
