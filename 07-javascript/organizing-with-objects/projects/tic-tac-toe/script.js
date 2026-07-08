@@ -24,7 +24,7 @@ function Gameboard() {
 
     const markSpace = (row, column, playerToken) => {
         const space = board[row][column];
-        console.log(`Marking space ${space.getValue()}`)
+        console.log(`Marking space ${space.getValue()}`);
 
         if (space.getValue() !== 0) {
             return;
@@ -104,22 +104,70 @@ function GameController(playerOneName = "player1", playerTwoName = "player2") {
         console.log(`It is ${getActivePlayer().name}'s turn!`);
     };
 
+    let gameOver = false;
     const playRound = (column, row) => {
-        console.log(`${getActivePlayer()} has marked space ${column}, ${row}`);
+        if (gameOver) {
+            return;
+        }
+
+        console.log(
+            `${getActivePlayer().name} has marked space ${column}, ${row}`,
+        );
 
         board.markSpace(column, row, getActivePlayer().token);
 
         // This is where to check if there is a winner or if the game has resulted in a tie.
+        const winner = checkWinner();
+        if (winner) {
+            gameOver = true;
+            return;
+        }
+        const isTie = isBoardFull();
+        if (isTie) {
+            gameOver = true;
+            return;
+        }
 
         // Switch player turn and reprint updated board
         switchPlayerTurn();
         printNewRound();
     };
 
+    const checkWinner = () => {
+        const b = board
+            .getBoard()
+            .map((row) => row.map((space) => space.getValue()));
+
+        const m = (a, b, c) => a !== 0 && a === b && a === c;
+
+        //rows
+        for (let i = 0; i < 3; i++) {
+            if (m(b[i][0], b[i][1], b[i][2])) return b[i][0];
+        }
+        // columns
+        for (let j = 0; j < 3; j++) {
+            if (m(b[0][j], b[1][j], b[2][j])) return b[0][j];
+        }
+        // Diagnosis
+        if (m(b[0][0], b[1][1], b[2][2])) return b[0][0];
+        if (m(b[0][2], b[1][1], b[2][0])) return b[0][2];
+
+        return null;
+    };
+
+    const isBoardFull = () => {
+        return board
+            .getBoard()
+            .flat()
+            .every((space) => space.getValue() !== 0);
+    };
+
     return {
         playRound,
         getActivePlayer,
         getBoard: board.getBoard,
+        checkWinner,
+        isBoardFull,
     };
 }
 
@@ -156,8 +204,14 @@ function ScreenController() {
         const board = game.getBoard();
         const activePlayer = game.getActivePlayer();
 
-        // Display player's turn
-        playerTurnDiv.textContent = `${activePlayer.name}'s turn:`;
+        // Display player's turn or winner / tie
+        if (game.checkWinner()) {
+            playerTurnDiv.textContent = `${activePlayer.name} wins!`;
+        } else if (game.isBoardFull()) {
+            playerTurnDiv.textContent = "Tie Game!";
+        } else {
+            playerTurnDiv.textContent = `${activePlayer.name}'s turn:`;
+        }
 
         // Render board squares
         board.forEach((row, rowIndex) => {
