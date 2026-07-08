@@ -163,6 +163,7 @@ function GameController(playerOneName = "player1", playerTwoName = "player2") {
     };
 
     return {
+        players,
         playRound,
         getActivePlayer,
         getBoard: board.getBoard,
@@ -192,9 +193,24 @@ function GameController(playerOneName = "player1", playerTwoName = "player2") {
  */
 
 function ScreenController() {
-    const game = GameController();
+
+    let game;
+    const playerForm = document.querySelector(".playerForm");
     const playerTurnDiv = document.querySelector(".turn");
     const boardDiv = document.querySelector(".board");
+
+    const startGame = (e) => {
+        e.preventDefault();
+
+        const nameOne = document.querySelector("#playerOneName").value || "Player 1";
+        const nameTwo = document.querySelector("#playerTwoName").value || "Player 2";
+        playerForm.style.display = "none";
+
+        game = GameController(nameOne, nameTwo);
+        updateScreen();
+    }
+
+    playerForm.addEventListener("submit", startGame);
 
     const updateScreen = () => {
         // clear the board
@@ -207,8 +223,10 @@ function ScreenController() {
         // Display player's turn or winner / tie
         if (game.checkWinner()) {
             playerTurnDiv.textContent = `${activePlayer.name} wins!`;
+            boardDiv.style.display = "none";
         } else if (game.isBoardFull()) {
             playerTurnDiv.textContent = "Tie Game!";
+            boardDiv.style.display = "none";
         } else {
             playerTurnDiv.textContent = `${activePlayer.name}'s turn:`;
         }
@@ -232,6 +250,11 @@ function ScreenController() {
 
     // Add event listener
     function clickHandlerBoard(e) {
+        if (!game) {
+
+            return;
+        };
+
         const selectedRow = e.target.dataset.row;
         const selectedColumn = e.target.dataset.column;
 
@@ -243,7 +266,7 @@ function ScreenController() {
     }
     boardDiv.addEventListener("click", clickHandlerBoard);
 
-    // Initial render
+    // initial render
     updateScreen();
 }
 
