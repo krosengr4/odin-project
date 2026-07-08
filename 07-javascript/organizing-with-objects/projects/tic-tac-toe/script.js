@@ -193,7 +193,6 @@ function GameController(playerOneName = "player1", playerTwoName = "player2") {
  */
 
 function ScreenController() {
-
     let game;
     const playerForm = document.querySelector(".playerForm");
     const playerTurnDiv = document.querySelector(".turn");
@@ -202,13 +201,15 @@ function ScreenController() {
     const startGame = (e) => {
         e.preventDefault();
 
-        const nameOne = document.querySelector("#playerOneName").value || "Player 1";
-        const nameTwo = document.querySelector("#playerTwoName").value || "Player 2";
+        const nameOne =
+            document.querySelector("#playerOneName").value || "Player 1";
+        const nameTwo =
+            document.querySelector("#playerTwoName").value || "Player 2";
         playerForm.style.display = "none";
 
         game = GameController(nameOne, nameTwo);
         updateScreen();
-    }
+    };
 
     playerForm.addEventListener("submit", startGame);
 
@@ -251,9 +252,8 @@ function ScreenController() {
     // Add event listener
     function clickHandlerBoard(e) {
         if (!game) {
-
             return;
-        };
+        }
 
         const selectedRow = e.target.dataset.row;
         const selectedColumn = e.target.dataset.column;
