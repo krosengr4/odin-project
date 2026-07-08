@@ -22,10 +22,11 @@ function Gameboard() {
     // How to get entire board that UI will have to eventually print
     const getBoard = () => board;
 
-    const markSpace = (column, row, playerToken) => {
+    const markSpace = (row, column, playerToken) => {
         const space = board[row][column];
+        console.log(`Marking space ${space.getValue()}`)
 
-        if (space.getValue !== 0) {
+        if (space.getValue() !== 0) {
             return;
         }
 
@@ -33,7 +34,7 @@ function Gameboard() {
     };
 
     const printBoard = () => {
-        const boardWithValues = board.map((map) =>
+        const boardWithValues = board.map((row) =>
             row.map((space) => space.getValue()),
         );
         console.log(boardWithValues);
@@ -115,7 +116,11 @@ function GameController(playerOneName = "player1", playerTwoName = "player2") {
         printNewRound();
     };
 
-    return { playRound, getActivePlayer };
+    return {
+        playRound,
+        getActivePlayer,
+        getBoard: board.getBoard,
+    };
 }
 
 /*
@@ -138,4 +143,54 @@ function GameController(playerOneName = "player1", playerTwoName = "player2") {
  * Render each grid space on the DOM
  */
 
-const game = GameController();
+function ScreenController() {
+    const game = GameController();
+    const playerTurnDiv = document.querySelector(".turn");
+    const boardDiv = document.querySelector(".board");
+
+    const updateScreen = () => {
+        // clear the board
+        boardDiv.textContent = "";
+
+        // Get the newest version of the board and player turn
+        const board = game.getBoard();
+        const activePlayer = game.getActivePlayer();
+
+        // Display player's turn
+        playerTurnDiv.textContent = `${activePlayer.name}'s turn:`;
+
+        // Render board squares
+        board.forEach((row, rowIndex) => {
+            row.forEach((space, columnIndex) => {
+                // Anything clickable should be a button
+                const spaceButton = document.createElement("button");
+                spaceButton.classList.add("space");
+
+                // Create data attributes to identify the exact row and column
+                // This makes it easier to pass into our 'playRound' function
+                spaceButton.dataset.row = rowIndex;
+                spaceButton.dataset.column = columnIndex;
+                spaceButton.textContent = space.getValue();
+                boardDiv.appendChild(spaceButton);
+            });
+        });
+    };
+
+    // Add event listener
+    function clickHandlerBoard(e) {
+        const selectedRow = e.target.dataset.row;
+        const selectedColumn = e.target.dataset.column;
+
+        // Make sure the space is selected and not the space in between
+        if (!selectedRow || !selectedColumn) return;
+
+        game.playRound(selectedRow, selectedColumn);
+        updateScreen();
+    }
+    boardDiv.addEventListener("click", clickHandlerBoard);
+
+    // Initial render
+    updateScreen();
+}
+
+ScreenController();
