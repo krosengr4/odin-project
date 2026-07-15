@@ -1,0 +1,9 @@
+***** npm *****
+
+- npm is a package manager. Basically a giant repository of plugins, libraries, and other tools.
+- We can install these tools with the CLI command "npm".
+
+***** package.json*****
+- npm revolves around a file called package.json.
+- This is a json file that contains information about our project, such as its name, any dependencies or their versions.
+
