@@ -5,48 +5,61 @@ const bookAuthorEl = document.getElementById("book-author");
 const pageCountEl = document.getElementById("page-count");
 const bookCards = document.querySelector(".books");
 
-sumbitBtn.addEventListener("click", addBookToLibrary);
+sumbitBtn.addEventListener("click", submitBtnHandler);
 
 let myLibrary = [];
 
-function Book(title, author, pages) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.uuid = crypto.randomUUID();
+class Book {
+    constructor(title, author, pages, uuid) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.uuid = uuid;
+    }
 
-    this.info = function () {
+    get getInfo() {
         return `Title: ${this.title}\nAuthor: ${this.author}\nPages: ${this.pages}\nUUID: ${this.uuid}`;
-    };
+    }
 }
 
-function addBookToLibrary() {
+function generateUUID() {
+    return crypto.randomUUID();
+}
+
+function addBookToLibrary(title, author, pages) {
+    let book = new Book(title, author, pages, generateUUID());
+    console.log(book.getInfo);
+    myLibrary.push(book);
+}
+
+function submitBtnHandler() {
     const titleVal = bookTitleEl.value;
-    if (titleVal === "") {
-        alert("Book Title must be filled out!");
-        return;
-    }
-
     const authorVal = bookAuthorEl.value;
-    if (authorVal === "") {
-        alert("Book Author must be filled out!");
+    const pagesVal = pageCountEl.value;
+
+    if (titleVal === "") {
+        alert("Book title must be filled out!");
         return;
     }
 
-    const pagesVal = pageCountEl.value;
+    if (authorVal === "") {
+        alert("Book author must be filled out!");
+        return;
+    }
+
     const pagesNum = Number(pagesVal);
     if (!Number.isInteger(pagesNum) || pagesVal === "") {
         alert("Page Count must be filled out with a number!");
         return;
     }
 
-    let book = new Book(titleVal, authorVal, pagesNum);
-    const bookValues = book.info();
-    console.log(bookValues);
-
-    myLibrary.push(book);
+    addBookToLibrary(titleVal, authorVal, pagesNum);
     closeDialog();
+    displayLibrary();
+}
 
+function deleteBook(book) {
+    myLibrary = myLibrary.filter((b) => b.uuid !== book.uuid);
     displayLibrary();
 }
 
@@ -55,11 +68,6 @@ function closeDialog() {
     bookAuthorEl.value = "";
     pageCountEl.value = "";
     addBookModal.close();
-}
-
-function deleteBook(book) {
-    myLibrary = myLibrary.filter((b) => b.uuid !== book.uuid);
-    displayLibrary();
 }
 
 function displayLibrary() {
@@ -100,6 +108,10 @@ function displayLibrary() {
     }
 }
 
-let greatGatsbyBook = new Book("The Great Gatsby", "F. Scott Fitzgerald", 180);
-myLibrary.push(greatGatsbyBook);
+addBookToLibrary(
+    "The Great Gatsby",
+    "F. Scott Fitzgerald",
+    180,
+    generateUUID(),
+);
 displayLibrary();
