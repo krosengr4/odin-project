@@ -11,7 +11,7 @@
     gap: 80px;
     height: 100px;
     background-color: darkgreen;
-    border: 5px solid saddlebrown;
+    border: 8px solid #7a4300;
 }
 
 .navBtn {
@@ -21,11 +21,14 @@
     width: 150px;
     height: 58px;
     color: darkblue;
+    font-weight: bold;
 }
 
 .navBtn:hover {
-    color: white;
+    color: #aa7942;
     background-color: darkblue;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 /* content */
