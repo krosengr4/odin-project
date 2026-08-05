@@ -1,7 +1,42 @@
 * {
-    background-color: midnightblue;
+    background-color: #aa7942;
+    font-family: "VictorMono Nerd Font";
 }
 
-button {
+/* nav buttons */
+#navButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    height: 100px;
+    background-color: tan;
+    border: 5px solid darkblue;
+}
+
+.navBtn {
+    font-family: "Iosevka Nerd Font";
+    font-size: 24px;
     cursor: pointer;
+    width: 150px;
+    height: 58px;
+}
+
+.navBtn:hover {
+    color: white;
+    background-color: darkblue;
+}
+
+/* content */
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Homepage Content */
+#homeTitle {
+    text-decoration: underline;
+    color: darkblue;
+    font-size: 52px;
 }
