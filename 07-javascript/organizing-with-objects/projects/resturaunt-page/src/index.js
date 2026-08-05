@@ -1,3 +1,3 @@
-alert("Hello how are you?");
+import "./style.css";
 
 console.log("Start");
