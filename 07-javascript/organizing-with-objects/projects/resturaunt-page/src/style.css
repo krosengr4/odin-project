@@ -10,8 +10,8 @@
     justify-content: center;
     gap: 80px;
     height: 100px;
-    background-color: tan;
-    border: 5px solid darkblue;
+    background-color: darkgreen;
+    border: 5px solid tan;
 }
 
 .navBtn {
@@ -20,6 +20,7 @@
     cursor: pointer;
     width: 150px;
     height: 58px;
+    color: darkblue;
 }
 
 .navBtn:hover {
@@ -51,14 +52,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid tan;
-    margin-top: 50px;
+    border: 10px dotted darkgreen;
+    margin-top: 12px;
 }
 
 #aboutContent {
     max-width: 500px;
     margin: 50px;
     margin-top: 0px;
+    font-size: 18px;
 }
 
 #hours {
