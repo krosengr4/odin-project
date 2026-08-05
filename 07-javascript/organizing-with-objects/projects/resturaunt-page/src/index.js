@@ -11,4 +11,4 @@ function loadHome() {
     contentDiv.replaceChildren(loadHomepage());
 }
 
-loadHome();
+// loadHome();
