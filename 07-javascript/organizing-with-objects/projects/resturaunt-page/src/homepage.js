@@ -34,7 +34,7 @@ function createTitle() {
 
     const homeTitle = document.createElement("h1");
     homeTitle.id = "title";
-    homeTitle.textContent = "Triple Crown Tavern";
+    homeTitle.textContent = "⚾️Triple Crown Tavern⚾️";
 
     titleDiv.appendChild(homeTitle);
 
