@@ -121,3 +121,46 @@
     justify-content: left;
     margin-top: -40px;
 }
+
+/* Contact page */
+#nameContent {
+    display: flex;
+    gap: 125px;
+    margin-top: 14px;
+}
+
+#rightNames,
+#leftNames {
+    display: flex;
+    flex-direction: column;
+    gap: 125px;
+}
+
+#nameCard {
+    border: 12px ridge #004100;
+    background-color: #7a4300;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -24px;
+}
+
+#name {
+    font-size: 40px;
+    text-decoration: underline;
+    color: navy;
+    background-color: #7a4300;
+    font-family: MesloLGS Nerd Font;
+}
+
+#info {
+    background-color: #7a4300;
+    font-size: 24px;
+    font-family: MesloLGS Nerd Font;
+    margin: 10px;
+}
+
+.contactTitle {
+    font-style: italic;
+}
