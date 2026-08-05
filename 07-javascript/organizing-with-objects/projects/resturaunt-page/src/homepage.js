@@ -46,6 +46,7 @@ function createAbout() {
     aboutDiv.id = "about";
 
     const aboutTitle = document.createElement("h2");
+    aboutTitle.id = "aboutTitle";
     aboutTitle.classList = "sectionTitle";
     aboutTitle.textContent = "About Us";
     aboutDiv.appendChild(aboutTitle);
