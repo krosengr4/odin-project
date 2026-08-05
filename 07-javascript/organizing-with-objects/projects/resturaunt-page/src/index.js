@@ -5,10 +5,10 @@ const contentDiv = document.querySelector("#content");
 
 const homeBtn = document.querySelector("#homeButton");
 
-homeBtn.addEventListener("click", load);
+homeBtn.addEventListener("click", loadHome);
 
-function load() {
+function loadHome() {
     contentDiv.replaceChildren(loadHomepage());
 }
 
-console.log("Start");
+loadHome();
