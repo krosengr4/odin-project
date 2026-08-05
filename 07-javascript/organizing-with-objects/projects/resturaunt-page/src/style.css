@@ -11,7 +11,7 @@
     gap: 80px;
     height: 100px;
     background-color: darkgreen;
-    border: 5px solid sandybrown;
+    border: 5px solid saddlebrown;
 }
 
 .navBtn {
@@ -35,17 +35,22 @@
     align-items: center;
 }
 
+#title {
+    margin-top: 4px;
+}
+
 /* Homepage Content */
 #title {
     text-decoration: underline;
     color: darkblue;
-    font-size: 52px;
+    font-size: 72px;
 }
 
 .sectionTitle {
     text-decoration: underline;
-    color: darkblue;
-    font-size: 32px;
+    color: navy;
+    font-size: 60px;
+    font-weight: bold;
 }
 
 #about {
@@ -53,13 +58,13 @@
     flex-direction: column;
     align-items: center;
     border: 10px dotted darkgreen;
-    margin-top: 12px;
+    margin-top: -24px;
 }
 
 #aboutContent {
     max-width: 500px;
-    margin: 50px;
-    margin-top: 0px;
+    margin: 32px;
+    margin-top: -24px;
     font-size: 18px;
 }
 
@@ -71,4 +76,41 @@
 
 .hoursContent {
     margin-top: 0px;
+}
+
+/* Menu content */
+#menuSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: -12px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+#itemTitle {
+    font-size: 32px;
+    color: navy;
+    text-decoration: underline;
+}
+
+#itemAbout {
+    font-size: 18px;
+}
+
+.itemCard {
+    display: flex;
+    border: 10px solid #7a4300;
+    max-width: 600px;
+}
+
+.itemContent {
+    margin: 24px;
+    display: flex;
+    align-items: center;
+}
+#menuTitle {
+    display: flex;
+    justify-content: left;
+    margin-top: -40px;
 }
