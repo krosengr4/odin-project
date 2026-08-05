@@ -53,7 +53,7 @@ const DRINK_ITEMS = [
 
 export function loadMenupage() {
     const page = document.createElement("div");
-    page.id = "menuContent";
+    page.id = "content";
 
     const title = createTitle();
     const foodDiv = createFoodSection();
