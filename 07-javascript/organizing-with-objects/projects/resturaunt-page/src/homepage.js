@@ -33,7 +33,7 @@ function createTitle() {
     titleDiv.id = "pageTitle";
 
     const homeTitle = document.createElement("h1");
-    homeTitle.id = "homeTitle";
+    homeTitle.id = "title";
     homeTitle.textContent = "Triple Crown Tavern";
 
     titleDiv.appendChild(homeTitle);
