@@ -10,17 +10,17 @@
     justify-content: center;
     gap: 64px;
     height: 100px;
-    background-color: darkgreen;
+    background-color: #004100;
     border: 16px ridge #7a4300;
 }
 
 .navBtn {
     font-family: "Iosevka Nerd Font";
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
     width: 150px;
     height: 58px;
-    color: darkblue;
+    background-color: #7a4300;
     font-weight: bold;
     border: 8px groove navy;
 }
