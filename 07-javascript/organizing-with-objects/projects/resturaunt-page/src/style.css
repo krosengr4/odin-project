@@ -22,15 +22,15 @@
     height: 58px;
     color: darkblue;
     font-weight: bold;
-    border: 8px double navy;
+    border: 8px groove navy;
 }
 
 .navBtn:hover {
     color: #aa7942;
     background-color: darkblue;
     text-decoration: underline;
-    font-weight: bold;
-    border: 10px groove #7a4300;
+    font-style: italic;
+    border: 8px ridge #7a4300;
 }
 
 /* content */
@@ -62,18 +62,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 15px dotted #7a4300;
+    border: 15px ridge #004100;
+    background-color: #7a4300;
+    width: 800px;
 }
 
 #aboutTitle {
     margin-top: 2px;
+    background-color: #7a4300;
 }
 
 #aboutContent {
-    max-width: 500px;
-    margin: 32px;
+    max-width: 700px;
+    margin: 31px;
     margin-top: -24px;
-    font-size: 18px;
+    font-size: 22px;
+    background-color: #7a4300;
 }
 
 #hours {
