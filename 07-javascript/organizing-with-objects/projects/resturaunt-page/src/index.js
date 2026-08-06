@@ -24,4 +24,5 @@ function loadContact() {
 homeBtn.addEventListener("click", loadHome);
 menuBtn.addEventListener("click", loadMenu);
 contactBtn.addEventListener("click", loadContact);
-// loadHome();
+
+loadHome();
