@@ -113,19 +113,23 @@
 
 .itemCard {
     display: flex;
-    border: 10px solid #7a4300;
+    border: 16px ridge navy;
     max-width: 600px;
+    background-color: #7a4300;
 }
 
 .itemContent {
     margin: 24px;
     display: flex;
     align-items: center;
+    background-color: #7a4300;
 }
+
 #menuTitle {
     display: flex;
     justify-content: left;
     margin-top: -40px;
+    /* background-color: #7a4300; */
 }
 
 /* Contact page */
