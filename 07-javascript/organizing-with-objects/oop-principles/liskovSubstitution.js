@@ -12,7 +12,7 @@ class Rectangle {
 
     setHeight(newHeight) {
         // If statement to check if the instance is a square
-        if (this.height === this.width) {
+        if (this instanceof Square) {
             this.width = newHeight;
         }
         this.height = newHeight;
