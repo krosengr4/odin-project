@@ -1,3 +1,18 @@
 * {
-    background-color: #063343;
+    background-color: #0b2731;
+    font-family: "Hurmit Nerd Font Propo";
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px ridge #1a14f0;
+}
+
+.titleHeader {
+    color: #b68558;
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 0 0 40px #00ffff;
 }
